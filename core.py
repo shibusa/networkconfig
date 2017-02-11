@@ -1,12 +1,14 @@
 import sys
 import os
-import vendor.cisco.returnstrings as CSCreturn
-import vendor.juniper.returnstrings as JNPreturn
 from constructors import MenuItem
 from vendor import __all__ as vendors
 
 menu = []
 quit = MenuItem("Quit")
+
+# import from vendors
+import vendor.cisco.returnstrings as CSCreturn
+import vendor.juniper.returnstrings as JNPreturn
 
 # Menu item and functions
 # VARIABLE = MenuItem('MENU TEXT', {'VENDOR NAME': VENDORIMPORT.FUNCTION.run, 'VENDOR NAME 2': VENDORIMPORT2.FUNCTION.run})
