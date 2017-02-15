@@ -10,9 +10,12 @@ SETUP:
 3. Re-run configprep to create returnstrings.py file
 4. Set up ./vendor/<VENDORNAME>/returnstrings.py with commands in the format of:
 VARIABLE = UserInput('STRING FORMATTING {0} {1} {2}', 'INPUT REQUEST 0', 'INPUT REQUEST 1', 'INPUT REQUEST 2')"
-5. Set up ./core.py with menu in the format of:
+5. Import returnstrings.py into ./core.py:
+import vendor.VENDORNAME.returnstrings as VENDORIMPORT
+6. Set up ./core.py with menu items in the format of:
 VARIABLE = MenuItem('MENU TEXT', {'VENDOR NAME': VENDORIMPORT.FUNCTION.run, 'VENDOR NAME 2': VENDORIMPORT2.FUNCTION.run})
-6. Populate 'menu' variable in ./core.py by using menu.append(menuitem)
+7. Populate 'menu' variable in ./core.py:
+menu.append(menuitem)
 
 STANDARD USE:
 1. Run script:
