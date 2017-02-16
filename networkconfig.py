@@ -11,6 +11,9 @@ if len(core.menu) <= 1:
 
 # Select Vendor OS
 netos = raw_input("Device configuration type ({}): ".format(", ".join(vendors)))
+while netos not in vendors:
+    print "\nInvalid vendor name."
+    netos = raw_input("Device configuration type ({}): ".format(", ".join(vendors)))
 
 # Check if config.cfg exists
 if os.path.isfile("config.cfg"):
@@ -28,14 +31,14 @@ while True:
     print ""
 
     try:
-        select = input("Select [1-{0}]: ".format(len(core.menu)) ) - 1
+        mselect = input("Select [1-{0}]: ".format(len(core.menu)) ) - 1
 
         # Write outputs to file
-        if select >= 0 and select <= len(core.menu) - 1:
-            if select == len(core.menu) - 1:
-                exit()
-            else:
-                outputfile.write(core.menu[select].func[netos]() + '\n')
+        if mselect == len(core.menu) - 1:
+            exit()
+        else:
+            selectinput = core.menu[mselect].func[netos]()
+            outputfile.write(selectinput + '\n')
         # Close file
         outputfile.close()
     except TypeError:

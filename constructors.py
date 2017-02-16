@@ -9,8 +9,10 @@ class UserInput:
     def __init__(self, output, *inputs):
         self.text = output
         self.input = list(inputs)
+        self.output = []
 
     def run(self):
-        for item in range(0, len(self.input)):
-            self.input[item] = raw_input(self.input[item])
-        return self.text.format(*self.input)
+        print self.input
+        for item in self.input:
+            self.output.append(raw_input(item))
+        return self.text.format(*self.output)
