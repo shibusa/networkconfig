@@ -31,15 +31,18 @@ while True:
     print ""
 
     try:
-        mselect = input("Select [1-{0}]: ".format(len(core.menu)) ) - 1
+        # Alter human input to array form
+        mselect = input("Select [1-{0}]: ".format(len(core.menu))) - 1
 
-        # Write outputs to file
-        if mselect == len(core.menu) - 1:
+        # If last item in menu, exit
+        if mselect < 0 or mselect >= len(core.menu):
+            print "\nPlease enter corresponding menu number."
+        elif core.menu[mselect] == core.menu[-1]:
+            # Close file
+            outputfile.close()
             exit()
+        # Else write outputs to file
         else:
-            selectinput = core.menu[mselect].func[netos]()
-            outputfile.write(selectinput + '\n')
-        # Close file
-        outputfile.close()
-    except TypeError:
+            outputfile.write(core.menu[mselect].func[netos]() + '\n')
+    except NameError:
         print "\nPlease enter corresponding menu number."

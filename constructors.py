@@ -12,7 +12,6 @@ class UserInput:
         self.output = []
 
     def run(self):
-        print self.input
         for item in self.input:
             self.output.append(raw_input(item))
         return self.text.format(*self.output)
