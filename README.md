@@ -1,4 +1,4 @@
-#networkConfig - Vendor Neutral Network Device Configuration Generator
+# networkConfig - Vendor Neutral Network Device Configuration Generator
 
 [![Alt text](https://img.youtube.com/vi/ElWGqvoCKp8/maxresdefault.jpg)](https://www.youtube.com/embed/ElWGqvoCKp8?rel=0;autohide=1;showinfo=0;color=white;cc_load_policy=1)
 *(click image above for video demo)*
