@@ -1,4 +1,11 @@
-Vendor neutral network device configuration generator.
+#networkConfig - Vendor Neutral Network Device Configuration Generator
+
+[![Alt text](https://img.youtube.com/vi/ElWGqvoCKp8/maxresdefault.jpg)](https://www.youtube.com/embed/ElWGqvoCKp8?rel=0;autohide=1;showinfo=0;color=white;cc_load_policy=1)
+*(click image above for video demo)*
+
+Written in Python.
+
+networkConfig is designed to minimize time to write a config file for a network device. End users are provided the flexibility to configure the tool to allow for network device vendors of all sorts (Cisco, Juniper, etc.).
 
 ## REQUIREMENTS
 - Python 2.7.* on local system
